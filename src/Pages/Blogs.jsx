@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-export default function Notes() {
+export default function Blogs() {
   function initialCount() {
     return 0
   }
