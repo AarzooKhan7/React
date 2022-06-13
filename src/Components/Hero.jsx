@@ -12,13 +12,13 @@ export default function Hero(){
     <div className="card text-center my-4" style= {{width:"92%", margin:"auto"}}>
       <img src="images.jpeg" className="card-img-top" alt="logo" style= {myStyle}/>
   <div className="card-header">
-    The Home Page announcement= "The Deployment Of React Js
-  </div>
+    </div>
 
       
   <div className="card-body" >
-    <h5 className="card-title">{props.announcement}</h5>
-    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h5 className="card-title">
+    The Home Page announcement   </h5>
+    <p className="card-text">Supporting text below as a natural lead-in to additional content.</p>
     <a href="/" className="btn btn-primary">Go somewhere</a>
   </div>
   <div className="card-footer text-muted">

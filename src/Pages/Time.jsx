@@ -2,22 +2,27 @@ import React from 'react';
 import Realtime from '../Components/Realtime'
 export default function Time(){
 
-  let currentTime = new Date();
+  let currentTime= new Date() 
   let hours=currentTime.getHours();
   let message="";
   let timeStyle= {fontWeight:"bold"};
   
   
-  if(hours>1 && hours<=11){
+  if(hours>=3 && hours<=11){
     message="Good Morning ! "
     timeStyle.color="green";
 
 
-  }else if(hours>11 && hours<=15){
+  }else if(hours<3){
+    message="Good Night";
+    timeStyle.color= "purple"
+  }
+  
+  else if(hours>11 && hours<=15){
     message="Good Afternoon !"
     timeStyle.color="yellow"
     
-    
+
 
   }else if(hours>15 && hours<=19){
     message="Good Evening !"
