@@ -1,6 +1,6 @@
 import React from "react";
 import Time from '../Pages/Time'
-export default function Hero(props){
+export default function Hero(){
  let myStyle= {
    width:"100%"
  }
@@ -10,8 +10,9 @@ export default function Hero(props){
 
 
     <div className="card text-center my-4" style= {{width:"92%", margin:"auto"}}>
+      <img src="images.jpeg" className="card-img-top" alt="logo" style= {myStyle}/>
   <div className="card-header">
-    {props.title}
+    The Home Page announcement= "The Deployment Of React Js
   </div>
 
       

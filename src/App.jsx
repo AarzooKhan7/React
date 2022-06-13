@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header title="React" />
+        <Header title="React"/>
 
 
 
