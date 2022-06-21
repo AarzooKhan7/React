@@ -1,43 +1,44 @@
 import React, { useState } from 'react';
 export default function Contact() {
 
+  const [data, setData] = useState({ name: '', email: '' });
+  const [displayData, setDisplayData] = useState('');
 
-const [firstName, setFirstName] = useState('');
-const formSubmit= (e)=>{
-  e.preventDefault()
-  const fName=e.target.firstName.value;
-  setFirstName(fName)
-}
+  const submit = (e) => {
+    e.preventDefault()
+    setDisplayData(data)
+  }
 
   return (
     <>
 
-      
+      <form onSubmit={submit} >
 
 
-      
-
-      <form onSubmit= {formSubmit}>
-        
-        <input defaultValue= " " name= "firstName" className= "form-control my-4" style= {{width:"92%", margin:"auto"}}/>
-
-
-        
-
-
-        <button className= "btn btn-primary mx-3 my-3">Submit</button>
+        <input defaultValue={data.name} onChange={(e) => setData({ ...data, name: e.target.value })} className="form-control my-4" style={{ width: "92%", margin: "auto" }} type="text" required placeholder="Name" />
 
 
 
-      
+        <input defaultValue={data.email} onChange={(e) => setData({ ...data, email: e.target.value })} className="form-control my-4" style={{ width: "92%", margin: "auto" }} type="email" placeholder="Email" required />
+
+
+
+        <button type="submit" className="btn btn-dark my-3 mx-3">Set</button>
+
       </form>
 
 
 
 
 
-<h1 className= "mx-3 my-4">{firstName}</h1>
-      
+
+
+      <h1>{displayData.name}</h1>
+      <h1>{displayData.email}</h1>
+
+
+
+
     </>
 
   )

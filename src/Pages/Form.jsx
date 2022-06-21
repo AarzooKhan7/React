@@ -42,11 +42,11 @@ const submitName= (e)=>{
 
 
 
-<input onChange= {(e)=> setData({...data, address: e.target.value})} className= "form-control" placeholder= "Enter address" style= {{width:"92%", margin:"auto"}} type= "email"/>
+<input onChange= {(e)=> setData({...data, address: e.target.value})} className= "form-control" placeholder= "Enter address" style= {{width:"92%", margin:"auto"}} type= "email" defaultValue= {data.email}/>
 
 
 
-<input onChange= {(e)=> setData({...data, number: e.target.value})} className= "form-control my-4" placeholder= "Enter number" style= {{width:"92%", margin:"auto"}} type= "number"/>
+<input onChange= {(e)=> setData({...data, number: e.target.value})} className= "form-control my-4" placeholder= "Enter number" style= {{width:"92%", margin:"auto"}} type= "number" defaultValue= {data.number}/>
 
 
 
@@ -65,6 +65,7 @@ const submitName= (e)=>{
 <h1 className= "mx-3 my-3">Last Name: {displayData.lastName}</h1>
 <h1 className= "mx-3 my-3">Address: {displayData.address}</h1>
 <h1 className= "mx-3 my-3">Number: {displayData.number}</h1>
+
 
 
 

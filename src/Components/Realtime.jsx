@@ -4,6 +4,7 @@ export default function Realtime(){
   let time = new Date().toLocaleTimeString();
   
 const[currentTime, setCurrentTime] = useState(time);
+  
   function update() {
     let time = new Date().toLocaleTimeString();
     setCurrentTime(time)
