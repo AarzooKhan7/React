@@ -38,7 +38,11 @@ export default function Header(props) {
             
 
             <li className="nav-item">
-              <Link to="/blogs" className="nav-link">Blogs</Link>
+              <Link to="/form" className="nav-link">Form</Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/classes" className="nav-link">Class Based</Link>
             </li>
 
 

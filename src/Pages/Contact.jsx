@@ -1,25 +1,43 @@
 import React, { useState } from 'react';
 export default function Contact() {
-  const [name, setName] = useState(' ');
-  const [btnName, setBtnName] = useState(' ')
-  const inputValue = (e) => {
-
-    setName(e.target.value)
 
 
-  }
-  const onSubmit = () => {
-    setBtnName(name)
-  }
+const [firstName, setFirstName] = useState('');
+const formSubmit= (e)=>{
+  e.preventDefault()
+  const fName=e.target.firstName.value;
+  setFirstName(fName)
+}
+
   return (
     <>
 
-      <h1 className="my-4 mx-3">{btnName}</h1>
+      
 
-      <input onChange={inputValue} value={name} type="text" className="form-control my-4 mx-3" style={{ width: "90%", margin: "auto" }} />
 
-      <button className="btn btn-primary my-4 mx-3" onClick={onSubmit}>Submit</button>
+      
 
+      <form onSubmit= {formSubmit}>
+        
+        <input defaultValue= " " name= "firstName" className= "form-control my-4" style= {{width:"92%", margin:"auto"}}/>
+
+
+        
+
+
+        <button className= "btn btn-primary mx-3 my-3">Submit</button>
+
+
+
+      
+      </form>
+
+
+
+
+
+<h1 className= "mx-3 my-4">{firstName}</h1>
+      
     </>
 
   )
